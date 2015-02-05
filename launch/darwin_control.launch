@@ -1,0 +1,17 @@
+<launch>
+
+  <rosparam file="$(find darwin_control)/config/darwin_control.yaml" command="load"/>
+
+
+  <!-- load the controllers -->
+    <node name="controller_spawner" pkg="controller_manager" type="spawner" respawn="false"
+    output="screen" ns="/darwin" args=" j_pan_position_controller j_tilt_position_controller j_gripper_l_position_controller j_gripper_r_position_controller j_pelvis_l_position_controller j_thigh1_l_position_controller j_thigh2_l_position_controller j_tibia_l_position_controller j_ankle1_l_position_controller j_ankle2_l_position_controller j_pelvis_r_position_controller j_thigh1_r_position_controller j_thigh2_r_position_controller j_tibia_r_position_controller j_ankle1_r_position_controller j_ankle2_r_position_controller joint_state_controller j_shoulder_l_position_controller j_high_arm_l_position_controller j_low_arm_l_position_controller j_wrist_l_position_controller j_shoulder_r_position_controller j_high_arm_r_position_controller j_low_arm_r_position_controller j_wrist_r_position_controller"/>
+    
+
+  <!-- convert joint states to TF transforms for rviz, etc -->
+  <node name="robot_state_publisher" pkg="robot_state_publisher" type="robot_state_publisher"
+    respawn="false" output="screen">
+    <remap from="/joint_states" to="/darwin/joint_states" />
+  </node>
+
+</launch>

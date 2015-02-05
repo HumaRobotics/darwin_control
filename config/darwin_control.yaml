@@ -1,0 +1,159 @@
+darwin:
+  # Publish all joint states -----------------------------------
+  joint_state_controller:
+    type: joint_state_controller/JointStateController
+    publish_rate: 50  
+  
+  # Position Controllers ---------------------------------------
+
+
+  # HEAD
+  j_pan_position_controller:
+    type: effort_controllers/JointPositionController
+    joint: j_pan
+    pid: {p: 100.0, i: 0.01, d: 10.0}
+
+  j_tilt_position_controller:
+    type: effort_controllers/JointPositionController
+    joint: j_tilt
+    pid: {p: 100.0, i: 0.01, d: 10.0}
+
+
+  # ARMS
+
+  j_shoulder_l_position_controller:
+    type: effort_controllers/JointPositionController
+    joint: j_shoulder_l
+    pid: {p: 100.0, i: 0.01, d: 10.0}
+
+  j_high_arm_l_position_controller:
+    type: effort_controllers/JointPositionController
+    joint: j_high_arm_l
+    pid: {p: 100.0, i: 0.01, d: 10.0}
+
+  j_low_arm_l_position_controller:
+    type: effort_controllers/JointPositionController
+    joint: j_low_arm_l
+    pid: {p: 100.0, i: 0.01, d: 10.0}
+
+  j_wrist_l_position_controller:
+    type: effort_controllers/JointPositionController
+    joint: j_wrist_l
+    pid: {p: 100.0, i: 0.01, d: 10.0}
+
+  j_gripper_l_position_controller:
+    type: effort_controllers/JointPositionController
+    joint: j_gripper_l
+    pid: {p: 100.0, i: 0.01, d: 10.0}
+
+
+
+
+  j_shoulder_r_position_controller:
+    type: effort_controllers/JointPositionController
+    joint: j_shoulder_r
+    pid: {p: 100.0, i: 0.01, d: 10.0}
+
+  j_high_arm_r_position_controller:
+    type: effort_controllers/JointPositionController
+    joint: j_high_arm_r
+    pid: {p: 100.0, i: 0.01, d: 10.0}
+
+  j_low_arm_r_position_controller:
+    type: effort_controllers/JointPositionController
+    joint: j_low_arm_r
+    pid: {p: 100.0, i: 0.01, d: 10.0}
+
+  j_wrist_r_position_controller:
+    type: effort_controllers/JointPositionController
+    joint: j_wrist_r
+    pid: {p: 100.0, i: 0.01, d: 10.0}
+
+  j_gripper_r_position_controller:
+    type: effort_controllers/JointPositionController
+    joint: j_gripper_r
+    pid: {p: 100.0, i: 0.01, d: 10.0}
+
+
+
+  j_pelvis_l_position_controller:
+    type: effort_controllers/JointPositionController
+    joint: j_pelvis_l
+    pid: {p: 100.0, i: 0.01, d: 10.0}
+
+
+
+  j_thigh1_l_position_controller:
+    type: effort_controllers/JointPositionController
+    joint: j_thigh1_l
+    pid: {p: 100.0, i: 0.01, d: 10.0}
+
+
+
+  j_thigh2_l_position_controller:
+    type: effort_controllers/JointPositionController
+    joint: j_thigh2_l
+    pid: {p: 100.0, i: 0.01, d: 10.0}
+
+
+
+  j_tibia_l_position_controller:
+    type: effort_controllers/JointPositionController
+    joint: j_tibia_l
+    pid: {p: 100.0, i: 0.01, d: 10.0}
+
+
+
+  j_ankle1_l_position_controller:
+    type: effort_controllers/JointPositionController
+    joint: j_ankle1_l
+    pid: {p: 100.0, i: 0.01, d: 10.0}
+
+
+
+  j_ankle2_l_position_controller:
+    type: effort_controllers/JointPositionController
+    joint: j_ankle2_l
+    pid: {p: 100.0, i: 0.01, d: 10.0}
+
+
+
+  j_pelvis_r_position_controller:
+    type: effort_controllers/JointPositionController
+    joint: j_pelvis_r
+    pid: {p: 100.0, i: 0.01, d: 10.0}
+
+
+
+  j_thigh1_r_position_controller:
+    type: effort_controllers/JointPositionController
+    joint: j_thigh1_r
+    pid: {p: 100.0, i: 0.01, d: 10.0}
+
+
+
+  j_thigh2_r_position_controller:
+    type: effort_controllers/JointPositionController
+    joint: j_thigh2_r
+    pid: {p: 100.0, i: 0.01, d: 10.0}
+
+
+
+  j_tibia_r_position_controller:
+    type: effort_controllers/JointPositionController
+    joint: j_tibia_r
+    pid: {p: 100.0, i: 0.01, d: 10.0}
+
+
+
+  j_ankle1_r_position_controller:
+    type: effort_controllers/JointPositionController
+    joint: j_ankle1_r
+    pid: {p: 100.0, i: 0.01, d: 10.0}
+
+
+
+  j_ankle2_r_position_controller:
+    type: effort_controllers/JointPositionController
+    joint: j_ankle2_r
+    pid: {p: 100.0, i: 0.01, d: 10.0}
